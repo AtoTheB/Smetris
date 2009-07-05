@@ -5,12 +5,15 @@
 
 class input{
 	Uint8 *keyevent;
+	int gameover;
 public:
 	int getKeyState();
+	int userQuit();
 
 };
 
-int gamePlay();
+int gamePlay( game &gameinfo );
 	
+
 
 #endif

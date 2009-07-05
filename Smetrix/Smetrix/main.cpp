@@ -4,6 +4,10 @@
 int main(int argc, char *argv[]){
 	game gameinfo;
 
+	gamePlay( gameinfo );
+
+
+
 	SDL_Quit();
 	return 0;
 
@@ -29,5 +33,11 @@ int initSdl(){
     glMatrixMode( GL_PROJECTION );
     glMatrixMode( GL_MODELVIEW );
 	
+	return 0;
+}
+
+int game::gameOver(){
+	if( gameover == 
+
 	return 0;
 }

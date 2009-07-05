@@ -1,11 +1,11 @@
 #include"gameplay.h"
 
 
-int gamePlay(){
+int gamePlay(game &gameinfo){
 	
 	input keyboard;
-		//Fixa funk för detta..
-	while( gameinfo.gameover == 0 ){
+	
+	while( keyboard.userQuit ){
 		keyboard.getKeyState();	
 
 	
@@ -15,9 +15,18 @@ int gamePlay(){
 }
 
 int input::getKeyState(){
+	
 	keyevent = SDL_GetKeyState(NULL);
 	if( keyevent[SDLK_ESCAPE] )
-		//game
-		return 0;
+		gameover = 1;
+	
 	return 0;
+}
+
+int input::userQuit(){
+	
+	if (gameover == 1)
+		return 1;
+	else 
+		return 0;
 }

@@ -6,6 +6,7 @@
 #include<iostream>
 #include<gl\gl.h>
 #include<SDL_image.h>
+#include"gameplay.h"
 
 #define SCREEN_WIDTH 120 ;
 #define SCREEN_HEIGHT 220;
@@ -13,8 +14,10 @@
 class game{
 	SDL_Surface *screen;
 	int gameover;
+	int points;
 	
 public:
+	int gameOver();
 	int initSdl();
 	int initGlVideo();
 };
