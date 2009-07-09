@@ -13,8 +13,8 @@
 
 class game{
 	SDL_Surface *screen;
-	int gameover;
-	int points;
+	int m_Gameover;
+	int m_Points;
 	
 public:
 	int gameOver();

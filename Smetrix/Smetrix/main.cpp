@@ -6,8 +6,6 @@ int main(int argc, char *argv[]){
 
 	gamePlay( gameinfo );
 
-
-
 	SDL_Quit();
 	return 0;
 
@@ -37,7 +35,8 @@ int initSdl(){
 }
 
 int game::gameOver(){
-	if( gameover == 
+	if( m_Gameover == 1)
+
 
 	return 0;
 }

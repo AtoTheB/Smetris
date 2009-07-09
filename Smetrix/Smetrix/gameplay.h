@@ -4,11 +4,12 @@
 #include"main.h"
 
 class input{
-	Uint8 *keyevent;
-	int gameover;
+	Uint8 *m_Keyevent;
+	int m_Gameover;
 public:
 	int getKeyState();
 	int userQuit();
+	int gameStart();
 
 };
 
