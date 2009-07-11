@@ -1,27 +1,16 @@
-#ifndef MAINH
-#define MAINH
+#ifndef MAIN_H
+#define MAIN_H
 
 #include<windows.h>
-#include<SDL.h>
 #include<iostream>
-#include<gl\gl.h>
-#include<SDL_image.h>
-#include"gameplay.h"
+#include"Gameinfo.h"
+#include"GlSDLVideo.h"
+#include"SDLInput.h"
+#include"Texture.h"
+#include"Drawgame.h"
 
-#define SCREEN_WIDTH 120 ;
-#define SCREEN_HEIGHT 220;
 
-class game{
-	SDL_Surface *screen;
-	int m_Gameover;
-	int m_Points;
-	
-public:
-	int gameOver();
-	int initSdl();
-	int initGlVideo();
-};
-
+//Flytta dess 2 till egna filer..
 class block{
 	//color
 	//type
