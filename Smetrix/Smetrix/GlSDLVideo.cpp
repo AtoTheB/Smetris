@@ -1,7 +1,7 @@
 #include"GlSDLVideo.h"
 #include"Gameinfo.h"
 
-int glsdlvideo::initSdl(){
+int glsdlvideo::initSdlGl(){
 	
 	SDL_Init(SDL_INIT_VIDEO);
 	SDL_GL_SetAttribute( SDL_GL_RED_SIZE, 8 );
