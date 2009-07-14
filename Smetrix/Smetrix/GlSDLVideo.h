@@ -12,7 +12,7 @@ class glsdlvideo{
 
 
 public:
-	glsdlvideo() : m_nScreenheight(220), m_nScreenwidth(120)
+	glsdlvideo() : m_nScreenheight(600), m_nScreenwidth(800)
 	{
 	}
 	int initSdlGl();

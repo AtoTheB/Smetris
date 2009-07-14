@@ -4,9 +4,9 @@
 #include"block.h"
 
 class gameplan : public block{
-	//Vilka platser är fyllda
-	int plan[20][10];
-	
+	//Whats currently on the gameplan.
+	int m_nPlan[20][10];
+
 public:
 	int checkRows(); 
 };
