@@ -6,7 +6,8 @@
 #include<windows.h>
 
 class gameinfo : public SDLInput{
-	int m_nGameover;
+	//Is in input now
+	//	bool m_nGameover;
 	int m_nPoints;
 	//What level.
 	int m_nLevel;
@@ -15,15 +16,14 @@ class gameinfo : public SDLInput{
 	// Nro 4x combos.
 	int m_nSmetrix;
 	//Return value from input i stored in this.
-	int m_nUserWant;
 	
 public:
-	gameinfo() : m_nGameover(0), m_nPoints(0), m_nLevel(0), m_nRows(0), m_nSmetrix(0)
+	gameinfo() : m_nPoints(0), m_nLevel(0), m_nRows(0), m_nSmetrix(0)
 	{
 	}
-	int gameOver();
 	int gameLoop();
-	int userWantDo( int m_nUserWant );
+
+
 };
 
 
