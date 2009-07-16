@@ -3,6 +3,7 @@
 
 #include<windows.h>
 #include<iostream>
+#include<string>
 #include"Gameinfo.h"
 #include"GlSDLVideo.h"
 #include"SDLInput.h"
