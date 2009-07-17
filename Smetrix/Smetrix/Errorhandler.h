@@ -3,6 +3,7 @@
 
 #include<string>
 #include<fstream>
+#include<stdarg.h>
 
 enum e_Errorcode{
 	EC_NoError = 0,
@@ -25,7 +26,7 @@ public:
 	
 	errorhandler( char* filename = "log.txt", bool On = 1 );
 	char getError(){ return *m_sErrormsg; }
-	void setErrorcode( e_Errorcode EC, char *Errormsg );
+	void setErrorcode( e_Errorcode EC, char *Errormsg, ... );
 	e_Errorcode getErrorcode();
 
 };

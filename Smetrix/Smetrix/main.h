@@ -12,6 +12,7 @@
 #include"Gameplan.h"
 #include"Block.h"
 #include"main.h"
+#include"Errorhandler.h"
 
 
 #endif
