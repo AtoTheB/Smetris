@@ -5,20 +5,26 @@
 #include<fstream>
 
 enum e_Errorcode{
-	NoError = 0,
-	Unknown,
-	Opengl
+	EC_NoError = 0,
+	EC_Unknown,
+	EC_Opengl
 };
 
 class errorhandler{
-	char* m_sLogfile;
+//VARIABLES 
+private:
+	char m_sLogfile[256];
 	bool m_bOn;
-	char* m_sErrormsg;
+	char m_sErrormsg[1024];
 	e_Errorcode m_EC_ID;
 public:
-	errorhandler( char* filename = "log.txt", bool On = 1 );
+
+//FUNCTIONS
+private:
+public:
 	
-	char* getError(){ return m_sErrormsg };
+	errorhandler( char* filename = "log.txt", bool On = 1 );
+	char getError(){ return *m_sErrormsg; }
 	void setErrorcode( e_Errorcode EC, char *Errormsg );
 	e_Errorcode getErrorcode();
 
