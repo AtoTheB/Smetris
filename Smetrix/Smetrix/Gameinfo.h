@@ -4,6 +4,7 @@
 #include"SDLInput.h"
 #include<SDL.h>
 #include<windows.h>
+#include"main.h"
 
 class gameinfo : public SDLInput{
 	//Is in input now
@@ -15,7 +16,7 @@ class gameinfo : public SDLInput{
 	int m_nRows;
 	// Nro 4x combos.
 	int m_nSmetrix;
-	//Return value from input i stored in this.
+	//FIXA PROTECED på vissa saker = derived classes har access till dom som ör protected.
 	enum e_gameStatus : int{
 		UserExit = -1,
 		Running,

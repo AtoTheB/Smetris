@@ -38,7 +38,35 @@ void errorhandler::setErrorcode( e_Errorcode EC, char *Errormsg, ... ){
 
 	ofstream outf(m_sLogfile, ios_base::app);
 	//make test here if file pointer is open.. Maybe a try-throw-catch?
-	outf << m_sErrormsg << endl;
+	outf << m_sErrormsg << endl << endl;
 	
 
+}
+
+void errorhandler::showErrormsg(){
+	
+	switch (m_EC_ID){
+		case EC_NoError: {
+			MessageBox(GetDesktopWindow(),
+			m_sErrormsg,
+			"All Okey",
+			MB_ICONINFORMATION | MB_OK );	
+			break;		
+		}
+		case EC_Error:
+		case EC_Unknown: {
+			MessageBox(GetDesktopWindow(),
+			m_sErrormsg,
+			"Unkown Error",
+			MB_ICONERROR | MB_OK );	
+			break;
+		}
+		case EC_Opengl: {
+			MessageBox(GetDesktopWindow(),
+			m_sErrormsg,
+			"Opengl Error",
+			MB_ICONERROR | MB_OK );	
+			break;	
+		}
+	}
 }

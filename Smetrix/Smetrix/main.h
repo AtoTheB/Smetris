@@ -1,9 +1,14 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+//C AND WINDOWS INCLUDES
+#include<string>
+#include<fstream>
+#include<stdarg.h>
 #include<windows.h>
 #include<iostream>
-#include<string>
+
+//OWN INCLUDES
 #include"Gameinfo.h"
 #include"GlSDLVideo.h"
 #include"SDLInput.h"
@@ -11,8 +16,5 @@
 #include"Drawgame.h"
 #include"Gameplan.h"
 #include"Block.h"
-#include"main.h"
-#include"Errorhandler.h"
 
-
-#endif
+#endif //MAIN_H
