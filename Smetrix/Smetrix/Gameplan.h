@@ -1,9 +1,9 @@
 #ifndef GAMEPLAN_H
 #define GAMEPLAN_H
 
-#include"block.h"
+#include"Primitives.h"
 
-class gameplan : public block{
+class gameplan{
 	//Whats currently on the gameplan.
 	int m_nPlan[20][10];
 
@@ -11,4 +11,4 @@ public:
 	int checkRows(); 
 };
 
-#endif
+#endif //GAMEPLAN_H
