@@ -16,5 +16,6 @@
 #include"Drawgame.h"
 #include"Gameplan.h"
 #include"Primitives.h"
+#include"Vertex.h"
 
 #endif //MAIN_H

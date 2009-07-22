@@ -1,9 +1,7 @@
 #ifndef VERTEX_H
 #define VERTEX_H
 
-#include"main.h"
-
-class Vertex(){
+class Vertex{
 	//Variables 
 private: 
 	double m_dX;
@@ -22,8 +20,10 @@ public:
 	Vertex() : m_dX(0), m_dY(0), m_dZ(0)
 	{
 	}
-	void move(double X = m_dX, double Y = m_dY, double Z = mdZ );
-
+	void move(double X, double Y, double Z);
+	inline double getX(){ return m_dX; }
+	inline double getY(){ return m_dY; }
+	inline double getZ(){ return m_dZ; }
 };
 
 #endif //VERTEX_H
