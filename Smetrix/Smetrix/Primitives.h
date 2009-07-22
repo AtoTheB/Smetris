@@ -3,12 +3,14 @@
 
 #include"main.h"
 #include"texture.h"
-//Class to store info about primitives like triangles and rectangles for using with the draw function.
+#include"Vertex.h"
+//Class to store info about primitives tringels and rextangels..
 
-class primitives : texture{
+class primitives{
 //VARIABLES
 private:
-	
+	//SKIT I ATT ÄRVA ta som en member istället:
+	texture m_tTexture;
 	//What kind of smetrix cube, fix own class for this one to not screw up my fine primitive class.
 	int m_nType;
 	
@@ -18,13 +20,11 @@ private:
 	
 	//Position, maybe fix so all corners get own x y pos, like this: 
 	/*
-	in constructor like &corners = new int [corners];
+	in constructor like &vertex = new int [corners];
 	This will make draw more flexible.. Maybe just overload the constructor, so i can choose wich way to create a primitive.
 	LIMIT SO ONLY CAN DRAW primitives with 3 or 4 corners. 
 	*/
-	double m_nX;
-	double m_nY;
-	
+	&m_vVortex1 = new Vortex[corners];
 	//Number of corners.
 	int m_nCorners;
 	//Rotation 
@@ -42,8 +42,11 @@ protected:
 private:
 
 public:
-	primitives() : m_nType(0), m_nSize(20), m_dRotation(0), m_dDepth(0)
-	{
+	primitives( int Corners) : m_nType(0), m_nSize(20), m_dRotation(0), m_dDepth(0): m_nCorners()
+	{	
+		//fixa denna if sats 
+		if( Corners =! 3 || Corners =! 4 )
+			//errorhandler: error för ,många få hörn.. 
 	}
 	//Draw the primitive to m_SDLSurface
 	int draw(); 
