@@ -35,7 +35,7 @@ private:
 public:
 	
 	errorhandler( char* filename = "log.txt", bool On = 1 );
-	string getError(){ return m_sErrorMsg; }
+	inline string getError(){ return m_sErrorMsg; }
 	void setErrorcode( e_Errorcode EC, char *Errormsg, ... );
 	e_Errorcode getErrorcode();
 	void showErrormsg();

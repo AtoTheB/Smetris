@@ -73,3 +73,7 @@ void errorhandler::showErrormsg(){
 		}
 	}
 }
+
+e_Errorcode errorhandler::getErrorcode(){
+	return m_EC_ID;
+}
