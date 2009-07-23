@@ -49,6 +49,10 @@ public:
 			//errorhandler: error för ,många få hörn.. 
 		}
 	}
+	~primitives(){
+		delete []m_vVertex;
+		m_vVertex = NULL;
+	}
 	//Draw the primitive to m_SDLSurface
 	int draw(); 
 protected:

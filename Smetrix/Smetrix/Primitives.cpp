@@ -20,3 +20,10 @@ int primitives::draw(){
 
 	return 0;
 }
+/*
+primitives::~primitives(){
+	delete []m_vVertex;
+	m_vVertex = NULL;
+
+}
+*/
