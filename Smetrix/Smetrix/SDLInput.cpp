@@ -1,6 +1,4 @@
 #include"SDLInput.h"
-#include"Gameinfo.h"
-
 
 int SDLInput::getKeyState(){
 	

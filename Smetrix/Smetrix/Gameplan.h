@@ -1,8 +1,6 @@
 #ifndef GAMEPLAN_H
 #define GAMEPLAN_H
 
-#include"Primitives.h"
-
 class gameplan{
 	//Whats currently on the gameplan.
 	int m_nPlan[20][10];

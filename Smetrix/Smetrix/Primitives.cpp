@@ -1,7 +1,5 @@
+#include<windows.h>
 #include"Primitives.h"
-#include"Vertex.h"
-
-
 
 int primitives::draw(){
 

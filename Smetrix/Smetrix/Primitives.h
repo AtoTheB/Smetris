@@ -1,9 +1,9 @@
 #ifndef PRIMITIVES_H
 #define PRIMITIVES_H
 
-#include"main.h"
 #include"Texture.h"
 #include"Vertex.h"
+
 //Class to store info about primitives tringels and rextangels..
 
 class primitives{

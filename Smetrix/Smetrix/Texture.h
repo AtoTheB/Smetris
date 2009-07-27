@@ -4,8 +4,8 @@
 #include<SDL_Image.h>
 #include<gl\gl.h>
 #include<windows.h>
-#include"Vertex.h"
 #include<string>
+#include"Vertex.h"
 
 using namespace std;
 

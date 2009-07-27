@@ -1,5 +1,7 @@
-#include"main.h"
 #include"Errorhandler.h"
+#include"Gameinfo.h"
+#include"GlSDLVideo.h"
+#include"windows.h"
 
 using namespace std;
 
@@ -8,22 +10,15 @@ int main(int argc, char *argv[]){
 	glsdlvideo c_Video;
 	errorhandler c_ErrorLogging;
 	
-	//Lägg in felhantering i alla klassers funktioner så rad10 har nån mening.
-	c_Video.initSdlGl();
-	if( c_ErrorLogging.getErrorcode() != EC_NoError ){
-		c_ErrorLogging.showErrormsg();
-		return -1;
+	//FIXA så errorhandler finns med i alla funktions anropp, även c_Video ska med för där ligger surfacen att rita på
+	try{
+		c_Video.initSdlGl();
+		c_Gameinfo.gameLoop();
 	}
-
-	c_ErrorLogging.showErrormsg();
-	if( c_ErrorLogging.getErrorcode() != EC_NoError ){
+	catch( e_Errorcode ){
+		//Fixa så allt minne av-allokeras här
 		c_ErrorLogging.showErrormsg();
-		return -1;
-	}
-
-	c_Gameinfo.gameLoop();
-	if( c_ErrorLogging.getErrorcode() != EC_NoError ){
-		c_ErrorLogging.showErrormsg();
+		c_ErrorLogging.~errorhandler();
 		return -1;
 	}
 	

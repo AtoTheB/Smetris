@@ -7,17 +7,24 @@
 
 class glsdlvideo{
 	SDL_Surface *screen;
-	const int m_nScreenwidth;
-	const int m_nScreenheight;
-
+	int m_nScreenWidth;
+	int m_nScreenHeight;
 
 public:
-	glsdlvideo() : m_nScreenheight(600), m_nScreenwidth(800)
-	{
+	glsdlvideo(): m_nScreenHeight(600), m_nScreenWidth(800)	{
 	}
-	int initSdlGl();
+	glsdlvideo(int Width, int Height){
+		m_nScreenWidth = Width;
+		m_nScreenHeight = Height;
+	}
+	~glsdlvideo(){
+		SDL_FreeSurface( screen );
+		screen = NULL;
+	}
+	
+	int initSdlGl( );
 
 };
 
 
-#endif
+#endif //GLSDLVIDEO_H

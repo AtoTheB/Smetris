@@ -2,11 +2,11 @@
 #define GAMEINFO_H
 
 #include"SDLInput.h"
-#include<SDL.h>
-#include<windows.h>
-#include"main.h"
 
 class gameinfo : public SDLInput{
+
+	//VARIABLES
+private:
 	//Is in input now
 	//	bool m_nGameover;
 	int m_nPoints;
@@ -25,6 +25,15 @@ class gameinfo : public SDLInput{
 		Exiting, 
 		Error
 	};
+
+protected:
+
+public:
+
+	//FUNCTIONS
+private:
+
+protected:
 
 	
 public:

@@ -1,7 +1,8 @@
 #include"Errorhandler.h"
 #include<time.h>
-
-using namespace std;
+#include<fstream>
+#include<stdarg.h>
+#include<windows.h>
 
 errorhandler::errorhandler( char* filename, bool On ){
 	
@@ -40,7 +41,6 @@ void errorhandler::setErrorcode( e_Errorcode EC, char *Errormsg, ... ){
 		return;
 
 	ofstream outf(m_sLogFileName.c_str(), ios_base::app);
-	//make test here if file pointer is open.. Maybe a try-throw-catch?
 	outf << m_sErrorMsg << endl << endl;
 	
 

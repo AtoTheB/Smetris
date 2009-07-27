@@ -1,12 +1,7 @@
 #ifndef ERRORHANDLER_H
 #define ERRORHANLDER_H
-/*
-#include<string>
-#include<fstream>
-#include<stdarg.h>
 
-*/
-#include"main.h"
+#include<string>
 
 using namespace std;
 
