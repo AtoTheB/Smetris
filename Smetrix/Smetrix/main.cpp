@@ -10,9 +10,8 @@ int main(int argc, char *argv[]){
 	glsdlvideo c_Video;
 	errorhandler c_ErrorLogging;
 	
-	//FIXA så errorhandler finns med i alla funktions anropp, även c_Video ska med för där ligger surfacen att rita på
 	try{
-		c_Video.initSdlGl();
+		c_Video.initSdlGl( &c_ErrorLogging );
 		c_Gameinfo.gameLoop();
 	}
 	catch( e_Errorcode ){

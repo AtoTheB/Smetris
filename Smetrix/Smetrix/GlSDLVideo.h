@@ -5,6 +5,8 @@
 #include<SDL.h>
 #include<gl\gl.h>
 
+class errorhandler;
+
 class glsdlvideo{
 	SDL_Surface *screen;
 	int m_nScreenWidth;
@@ -22,7 +24,7 @@ public:
 		screen = NULL;
 	}
 	
-	int initSdlGl( );
+	int initSdlGl( errorhandler *c_Errorlogging );
 
 };
 

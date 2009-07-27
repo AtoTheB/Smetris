@@ -1,13 +1,11 @@
 #include"GlSDLVideo.h"
+#include"Errorhandler.h"
 
 
-int glsdlvideo::initSdlGl(){
+int glsdlvideo::initSdlGl( errorhandler *c_Errorlogging ){
 	
-	
-
-	if( SDL_Init(SDL_INIT_VIDEO)< 0 )
-		//seterrorcode..
-		
+	if( SDL_Init(SDL_INIT_EVERYTHING)< 0 )
+		c_Errorlogging->setErrorcode( EC_SDL, SDL_GetError() );
 
 	SDL_WM_SetCaption("Smetrix", NULL ); 
 	SDL_GL_SetAttribute( SDL_GL_RED_SIZE, 8 );

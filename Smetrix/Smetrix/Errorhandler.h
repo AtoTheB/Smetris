@@ -9,6 +9,7 @@ enum e_Errorcode{
 	EC_NoError = 0,
 	EC_Unknown,
 	EC_Opengl,
+	EC_SDL,
 	EC_Error
 };
 
@@ -31,7 +32,9 @@ public:
 	
 	errorhandler( char* filename = "log.txt", bool On = 1 );
 	inline string getError(){ return m_sErrorMsg; }
-	void setErrorcode( e_Errorcode EC, char *Errormsg, ... );
+	void setErrorcode( e_Errorcode EC, char *Errormsg );
+	//Varför dom 3 punkterna ???
+	//void setErrorcode( e_Errorcode EC, char *Errormsg, ... );
 	e_Errorcode getErrorcode();
 	void showErrormsg();
 	//fixa så denna skriver typ app closed i log filen. 

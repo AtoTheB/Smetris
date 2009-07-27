@@ -24,10 +24,10 @@ errorhandler::errorhandler( char* filename, bool On ){
 	_strtime_s(tmptime);
 	//make test here if file pointer is open.. Maybe a try-throw-catch?
 	outf<<"(DD/MM/Y)" << tmpdate << "(HH:MM:SS)" << tmptime << endl << endl; 
-	setErrorcode( EC_NoError, "No Error" );
+	setErrorcode( EC_NoError, "Log file started." );
 }
 
-void errorhandler::setErrorcode( e_Errorcode EC, char *Errormsg, ... ){
+void errorhandler::setErrorcode( e_Errorcode EC, char *Errormsg ){
 	/* OLD CODE FROM WHEN ERROR MSG WAS A C-Char string
 	va_list ap;
 	va_start( ap, Errormsg );
