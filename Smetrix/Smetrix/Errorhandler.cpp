@@ -4,6 +4,8 @@
 #include<stdarg.h>
 #include<windows.h>
 
+using namespace std;
+
 errorhandler::errorhandler( char* filename, bool On ){
 	
 	m_bOn = On;
@@ -24,10 +26,10 @@ errorhandler::errorhandler( char* filename, bool On ){
 	_strtime_s(tmptime);
 	//make test here if file pointer is open.. Maybe a try-throw-catch?
 	outf<<"(DD/MM/Y)" << tmpdate << "(HH:MM:SS)" << tmptime << endl << endl; 
-	setErrorcode( EC_NoError, "Log file started." );
+	setErrorcode( EC_NoError, "Log file started.", false );
 }
 
-void errorhandler::setErrorcode( e_Errorcode EC, char *Errormsg ){
+void errorhandler::setErrorcode( e_Errorcode EC, char *Errormsg, bool Throw ){
 	/* OLD CODE FROM WHEN ERROR MSG WAS A C-Char string
 	va_list ap;
 	va_start( ap, Errormsg );
@@ -43,6 +45,8 @@ void errorhandler::setErrorcode( e_Errorcode EC, char *Errormsg ){
 	ofstream outf(m_sLogFileName.c_str(), ios_base::app);
 	outf << m_sErrorMsg << endl << endl;
 	
+	if( Throw )
+		throw m_EC_ID;
 
 }
 

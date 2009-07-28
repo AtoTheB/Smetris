@@ -20,11 +20,8 @@ public:
 		m_nScreenHeight = Height;
 	}
 	~glsdlvideo(){
-		SDL_FreeSurface( screen );
-		screen = NULL;
 	}
-	
-	int initSdlGl( errorhandler *c_Errorlogging );
+	int initSdlGl( errorhandler &c_Errorlogging );
 
 };
 
